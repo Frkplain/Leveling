@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        int firstPass = 0;
+        int secondPass = 0;
+        for (int levelCycle = 1; levelCycle < 95; levelCycle++)
+        {
+            firstPass += (int)Mathf.Floor(levelCycle + (300.0f * Mathf.Pow(2.0f, levelCycle / 7.0f)));
+            secondPass = firstPass / 4;
+        }
+        print(secondPass);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
